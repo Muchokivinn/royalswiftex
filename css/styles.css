@@ -1,0 +1,57 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: georgia, serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav ul {
+    display: none; /* Hide the main navigation by default */
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu toggle button */
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex; /* Show the navigation when toggle is active */
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+/* Pop-out scale effect for active image */
+.gallery-item.active img {
+    transform: scale(1.1); /* Pop-out effect */
+}
+
+.gallery-image {
+    transition: transform 0.5s ease;
+}
+
+
+/* Hide footer on screens 768px or smaller */
+@media (max-width: 768px) {
+    #footer {
+       display: none !important;
+    }
+}
